@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fdf1f5;
+  color: #333;
+}
+
+.logo {
+  color: #ff5fa2 !important;
+  font-size: 1.8rem;
+}
+
+.hero-section {
+  background-color: #fdf1f5;
+}
+
+.main-title {
+  color: #ff5fa2;
+  font-weight: 700;
+}
+
+.section-title {
+  color: #ff5fa2;
+  font-weight: 700;
+}
+
+.about-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ГАЛЕРЕЯ - 3 фото в ряд */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 200px));
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-item {
+  width: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.booking-form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Для планшетов - чуть меньше */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 160px));
+    gap: 15px;
+  }
+  
+  .gallery-item img {
+    height: 130px;
+  }
+}
+
+/* Для телефонов - в столбик */
+@media (max-width: 576px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .gallery-item {
+    width: 250px;
+  }
+  
+  .gallery-item img {
+    height: 200px;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+}
